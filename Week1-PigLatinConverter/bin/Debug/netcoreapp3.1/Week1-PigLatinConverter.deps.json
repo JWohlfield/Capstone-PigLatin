@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "Week1-PigLatinConverter/1.0.0": {
+        "runtime": {
+          "Week1-PigLatinConverter.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Week1-PigLatinConverter/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

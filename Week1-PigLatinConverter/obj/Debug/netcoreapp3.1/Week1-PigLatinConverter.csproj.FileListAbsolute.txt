@@ -1,0 +1,13 @@
+C:\Users\Butch\source\repos\Capstones\Week1-PigLatinConverter\Week1-PigLatinConverter\bin\Debug\netcoreapp3.1\Week1-PigLatinConverter.exe
+C:\Users\Butch\source\repos\Capstones\Week1-PigLatinConverter\Week1-PigLatinConverter\bin\Debug\netcoreapp3.1\Week1-PigLatinConverter.deps.json
+C:\Users\Butch\source\repos\Capstones\Week1-PigLatinConverter\Week1-PigLatinConverter\bin\Debug\netcoreapp3.1\Week1-PigLatinConverter.runtimeconfig.json
+C:\Users\Butch\source\repos\Capstones\Week1-PigLatinConverter\Week1-PigLatinConverter\bin\Debug\netcoreapp3.1\Week1-PigLatinConverter.runtimeconfig.dev.json
+C:\Users\Butch\source\repos\Capstones\Week1-PigLatinConverter\Week1-PigLatinConverter\bin\Debug\netcoreapp3.1\Week1-PigLatinConverter.dll
+C:\Users\Butch\source\repos\Capstones\Week1-PigLatinConverter\Week1-PigLatinConverter\bin\Debug\netcoreapp3.1\Week1-PigLatinConverter.pdb
+C:\Users\Butch\source\repos\Capstones\Week1-PigLatinConverter\Week1-PigLatinConverter\obj\Debug\netcoreapp3.1\Week1-PigLatinConverter.csprojAssemblyReference.cache
+C:\Users\Butch\source\repos\Capstones\Week1-PigLatinConverter\Week1-PigLatinConverter\obj\Debug\netcoreapp3.1\Week1-PigLatinConverter.AssemblyInfoInputs.cache
+C:\Users\Butch\source\repos\Capstones\Week1-PigLatinConverter\Week1-PigLatinConverter\obj\Debug\netcoreapp3.1\Week1-PigLatinConverter.AssemblyInfo.cs
+C:\Users\Butch\source\repos\Capstones\Week1-PigLatinConverter\Week1-PigLatinConverter\obj\Debug\netcoreapp3.1\Week1-PigLatinConverter.csproj.CoreCompileInputs.cache
+C:\Users\Butch\source\repos\Capstones\Week1-PigLatinConverter\Week1-PigLatinConverter\obj\Debug\netcoreapp3.1\Week1-PigLatinConverter.dll
+C:\Users\Butch\source\repos\Capstones\Week1-PigLatinConverter\Week1-PigLatinConverter\obj\Debug\netcoreapp3.1\Week1-PigLatinConverter.pdb
+C:\Users\Butch\source\repos\Capstones\Week1-PigLatinConverter\Week1-PigLatinConverter\obj\Debug\netcoreapp3.1\Week1-PigLatinConverter.genruntimeconfig.cache
