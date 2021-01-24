@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace Week1_PigLatinConverter
 {
@@ -50,7 +51,7 @@ namespace Week1_PigLatinConverter
         }
 
         public static bool ValidWord(string input)
-        {
+        {            
             //  setup special character string
             string special = "0123456789@";
 
@@ -89,13 +90,36 @@ namespace Week1_PigLatinConverter
             return -1;
         }
 
+        public static int GetEndPunctuationIndex(string input)
+        {
+            int endIndex = -1;
+
+            if(input.EndsWith('!') || input.EndsWith('?') || input.EndsWith('.'))
+            {
+                string EndPunctuation = "!?.";
+
+                for (int i = input.Length - 1; i >= 0; i--)
+                {
+                    if(EndPunctuation.Contains(input.Substring(i, 1)))
+                    {
+                        endIndex = i;
+                    }
+                }
+            }
+
+            return endIndex;
+        }
+
         public static string ConvertWord(string input)
         {
             string inputLower = input.ToLower(); 
             string converted;
 
-            int vowelIndex = GetVowelIndex(inputLower); // get vowel index to setup conversion
-            string finalChar = input.Substring(input.Length - 1);
+            // get vowel index to setup conversion
+            int vowelIndex = GetVowelIndex(inputLower); 
+            // get punctuation index
+            int startPunctuationIndex = GetEndPunctuationIndex(inputLower);
+            int endOfWordIndex = input.Length - startPunctuationIndex;
 
             switch (vowelIndex)
             {
@@ -106,9 +130,10 @@ namespace Week1_PigLatinConverter
                 
                 //word that starts with a vowel
                 case 0:
-                    if (finalChar == "?" || finalChar == "!" || finalChar == ".") 
+                    if(startPunctuationIndex > -1)    
                     {
-                        converted = input.Substring(vowelIndex,input.Length - 2) + "way" + finalChar;
+                        converted = input.Substring(vowelIndex, startPunctuationIndex) + "way" +
+                            input.Substring(startPunctuationIndex, endOfWordIndex);
                     }
                     else
                     {
@@ -118,10 +143,10 @@ namespace Week1_PigLatinConverter
                 
                 //word that starts with a consonant
                 default:
-                    if (finalChar == "?" || finalChar == "!" || finalChar == ".")
+                    if (startPunctuationIndex > -1)
                     {
-                        converted = input.Substring(vowelIndex, input.Length - 2) +
-                            input.Substring(0, vowelIndex) + "ay" + finalChar;
+                        converted = input.Substring(vowelIndex, startPunctuationIndex - vowelIndex) +
+                            input.Substring(0, vowelIndex) + "ay" + input.Substring(startPunctuationIndex, endOfWordIndex);
                     }
                     else
                     {
@@ -130,8 +155,34 @@ namespace Week1_PigLatinConverter
                     }
                     break;
             }
+            // Adjust case positionally of converted word
+            return CaseAdjust(input,converted);
+        }
 
-            return converted;
+        public static string CaseAdjust(string input, string converted)
+        {
+            input = input.Trim();
+            converted = converted.Trim();
+            string adjusted = "";
+
+            for (int i = 0; i < input.Length; i++)
+            {
+                   if(char.IsUpper(input[i]))
+                    {
+                        adjusted += char.ToUpper(converted[i]);
+                    }
+                   else
+                    {
+                        adjusted += char.ToLower(converted[i]);
+                    }
+            }
+
+            if(converted.Length > adjusted.Length)
+            {
+                adjusted += converted.Substring(input.Length, converted.Length - input.Length);
+            }
+
+            return adjusted;
         }
     }
 }
